@@ -1,0 +1,298 @@
+<style type="text/css">
+    @page {
+            margin: 0 0;
+        }
+        *{
+            -webkit-print-color-adjust:exact;
+        }
+        body {
+            background: none !important;
+            margin:0 !important;
+        }
+        .bord-bottom{
+            border-bottom:1px solid #dadada;
+            margin:0;
+        }
+    /* .product_itemdiv {
+        border: 1px solid #892431;
+    } */
+
+    .product_itemdiv p span{
+        
+        color:black !important;
+        padding: 8px 2px !important;
+        font-weight: 500;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+    .product_itemdiv span p:nth-child(odd) {
+        background-color: #f7f7f7
+    }
+
+    .product_itemdiv span p span {
+        font-weight: bold;
+    }
+    .product_itemdiv span p span b {
+        color: #892431 !important;
+        font-style: bold;
+    }
+
+    .service_itemdiv p{
+        background: #892431;
+        font-size: 13px;
+        text-transform: uppercase;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-bottom: none !important;
+    }
+
+    .service_itemdiv p span{
+        color:#fff !important;
+        padding: 8px 2px !important;
+        font-weight: 500;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+       .service_itemdiv > span{
+            font-size: 12px !important;
+        padding: 8px 2px 3px 2px !important;
+        color: #333 !important;
+        display: block;
+        border-bottom: 1px solid #dadada;
+       }
+       .service_itemdiv > span span span{
+        display:inline-block;
+       }
+    div.company-logo img {
+        height: auto !important
+    }
+    .service_itemdiv span p span b {
+        color: #f9de34 !important;
+    }
+    /* div.service_itemdiv span span:nth-child(2) span:nth-child(2) {
+        display: none;
+        color: pink;
+    } */
+
+    div.total h4 {
+        padding-right: 26px;
+    }
+    div.grand-total h4 {
+        padding-right: 54px !important;
+    }
+
+    </style>
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet" />
+    <div style="margin:0 auto;background:#fff;font-family: 'Roboto', sans-serif;position:relative;min-height:1000px;">
+        <div style="margin-top:0px;padding:40px 20px 10px 20px;">
+            <div style="display:inline-block;vertical-align:top;width:60%;">
+                <div style="border-bottom:2px solid #333;">
+                    <h3 style="margin:0 0 0 0;">
+                        <label style="font-size: 40px;color:#333;padding-right: 5px;">INVOICE</label></h3>
+                    <p style="margin:5px 0 6px 0;font-size:17px;">
+                        <label style="color:#868686;">{TicketNumber}</label><label style="float:right;clear:both;color:#868686;">{TicketDate}</label></p>
+                </div>
+                <div style="margin-top:20px;">
+                    <div style="display:inline-block;vertical-align:top;margin-right:15px;width:20%;text-align:center;">
+                        <h5 style="margin:0 0 0 0;color:#757575;font-weight: normal;font-size: 14px;">
+                            Total</h5>
+                        <h4 style="margin:8px 0 8px 0">
+                            ${InvoiceTotal}</h4>
+                    </div>
+                    <div style="display:inline-block;vertical-align:top;margin-right:15px;width:20%;text-align:center;">
+                        <h5 style="margin:0 0 0 0;color:#757575;font-weight: normal;font-size: 14px;">
+                            Due Date</h5>
+                        <h4 style="margin:8px 0 8px 0;font-size:14px;">
+                            {DueDate}</h4>
+                    </div>
+                    <div style="display:inline-block;vertical-align:top;margin-right:15px;width:20%;text-align:center;">
+                        <h5 style="margin:0 0 0 0;color:#757575;font-weight: normal;font-size: 14px;">
+                            Due Amount</h5>
+                        <h4 style="margin:8px 0 8px 0;color:#892431;font-size:22px;">
+                            {DueAmount}</h4>
+                    </div>
+                    <div style="display:inline-block;vertical-align:top;margin-right:15px;width:20%;text-align:center;">
+                        <h5 style="margin:0 0 0 0;color:#757575;font-weight: normal;font-size: 14px;">
+                            Invoice Paid</h5>
+                        <h4 style="margin:8px 0 8px 0;font-size:14px;">
+                            {InvoicePaid}</h4>
+                    </div>
+                </div>
+                <div style="margin-top:40px;padding:0 15px;">
+                    <div style="font-size:12px;margin: 0 0;display:flex">
+                        <h6 style="margin:0 0 0 0;font-size:12px;color:#33475b;">
+                            Technician:</h6> &nbsp;
+                            <p style="margin:0 0 0 0;">
+                                {TechFirstName} {TechLastName}
+                            </p>
+                    </div>
+                </div>
+                <div style="margin-top:10px;padding:0 15px;">
+                    <h3 style="margin:0 0 0 0;font-size:16px;color:#33475b;">
+                        Reason for Visit:</h3>
+                    <p style="margin:8px 0 0 0;font-size:13px;">
+                        {IssueDescription}</p>
+                </div>
+                <div style="margin-top:10px;padding:0 15px;">
+                    <h3 style="margin:0 0 0 0;font-size:16px;color:#33475b;">
+                        Service Performed:</h3>
+                    <p style="margin:5px 0 0 0;font-size:13px;">
+                        {ExplanationServices}</p>
+                </div>
+            </div>
+            <div style="display:inline-block;vertical-align:top;width:38%;">
+                <div style="padding-left:60px;">
+                    <div class="company-logo" style="width:140px;margin-bottom:5px;">
+                        {CompanyLogo}</div>
+                    <div style="margin-top:10px;margin-bottom:20px;">
+                        <h3 style="margin:0 0 0 0;font-size:14px;color:#33475b;">
+                            {CompanyName}</h3>
+                        <p style="margin:2px 0 0 0;font-size:12px;color:#3e3e3e;">
+                            {CompanyAddress}<br />
+                            {CompanyCity}, {CompanyState} - {CompanyZip}</p>
+                    </div>
+                    <div style="margin-top:15px;text-align:left;">
+                        <h4 style="margin:0 0 0 0;font-size: 15px;color: #757575;">
+                            BILLING ADDRESS:</h4>
+                        <h5 style="margin:5px 0 0 0;color:#333;font-size:14px;">
+                            {BillToCustomerName}</h5>
+                        <p style="margin:0 0 0 0;font-size: 13px;color: #484848;">
+                            {BillToAddress}</p>
+                        <p style="margin:0 0 0 0;font-size: 13px;color: #484848;">
+                            {BillToCity}, {BillToState} {BillToZip}<br />
+                            &nbsp;</p>
+                    </div>
+                    <div style="margin-top:25px; text-align:left;">
+                        <h4 style="margin:0 0 0 0;font-size: 15px;color: #868686;">
+                            SHIPPING ADDRESS:</h4>
+                        <h5 style="margin:5px 0 0 0;color:#333;font-size:14px;">
+                            {ShipToCustomerName}</h5>
+                        <p style="margin:0 0 0 0;font-size: 13px;color: #484848;">
+                            {ShipToAddress}</p>
+                        <p style="margin:0 0 0 0;font-size: 13px;color: #484848;">
+                            {ShipToCity}, {ShipToState} {ShipToZip}<br />
+                            &nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top:30px;/* padding:0 15px; */margin-right: 17px;margin-left: 17px;border: 2px solid black;">
+            <div class="product_itemdiv" style="display:table;width:100%">
+                {productItems}</div>
+        </div>
+        <div style="margin-top:30px;padding:0 15px;">
+            <div class="service_itemdiv" style="display:table;width:100%">
+                {ServiceItems}</div>
+        </div>
+        <div style="padding:0 15px;">
+            <!-- <div style="display:{DiscountAmountDisplay}">
+                <div style="display:inline-block;vertical-align:top;width:10%;">
+                    &nbsp;</div>
+                <div style="display:inline-block;vertical-align:top;width:45%;">
+                    &nbsp;</div>
+                <div style="display:inline-block;vertical-align:top;width:26%;">
+                    <h4 style="margin:3px 0px;font-weight:normal;text-align:right;font-size:13px !important;color:#565656">
+                        Discount:</h4>
+                </div>
+                <div style="display:inline-block;vertical-align:top;width:15%;">
+                    <h4 style="margin:3px 0px;font-weight:600;text-align:right;font-size:13px !important;color:#565656">
+                        ${DiscountAmount}</h4>
+                </div>
+            </div> -->
+            <div style="display:{ServiceDiscountAmountDisplay}">
+                <div style="display:inline-block;vertical-align:top;width:10%;">
+                    &nbsp;</div>
+                <div style="display:inline-block;vertical-align:top;width:45%;">
+                    &nbsp;</div>
+                <div style="display:inline-block;vertical-align:top;width:26%;">
+                    <h4 style="margin:3px 0px;font-weight:normal;text-align:right;font-size:13px !important;color:#565656">
+                        Service Discount:</h4>
+                </div>
+                <div class="total" style="display:inline-block;vertical-align:top;width:15%;">
+                    <h4 style="margin:3px 0px;font-weight:600;text-align:right;font-size:13px !important;color:#565656">
+                        ${ServiceDiscountAmount}</h4>
+                </div>
+            </div>
+            <div style="display:{OtherChargeDisplay}">
+                <div style="display:inline-block;vertical-align:top;width:10%;">
+                    &nbsp;</div>
+                <div style="display:inline-block;vertical-align:top;width:45%;">
+                    &nbsp;</div>
+                <div style="display:inline-block;vertical-align:top;width:26%;">
+                    <h4 style="margin:3px 0px;font-weight:normal;text-align:right;font-size:13px !important;color:#565656">
+                        Other Charge:</h4>
+                </div>
+                <div class="total" style="display:inline-block;vertical-align:top;width:15%;">
+                    <h4 style="margin:3px 0px;font-weight:600;text-align:right;font-size:13px !important;color:#565656">
+                        ${OtherChargeAmount}</h4>
+                </div>
+            </div>
+            <div style="display:{OtherChargeDisplay}">
+                <div style="display:inline-block;vertical-align:top;width:10%;">
+                    &nbsp;</div>
+                <div style="display:inline-block;vertical-align:top;width:45%;">
+                    &nbsp;</div>
+                <div style="display:inline-block;vertical-align:top;width:26%;">
+                    <h4 style="margin:3px 0px;font-weight:normal;text-align:right;font-size:13px !important;color:#565656">
+                        Other Charge Tax:</h4>
+                </div>
+                <div class="total" style="display:inline-block;vertical-align:top;width:15%;">
+                    <h4 style="margin:3px 0px;font-weight:600;text-align:right;font-size:13px !important;color:#565656">
+                        ${OtherChargeTaxAmount}</h4>
+                </div>
+            </div>
+            <div style="">
+                <div style="display:inline-block;vertical-align:top;width:10%;">
+                    &nbsp;</div>
+                <div style="display:inline-block;vertical-align:top;width:45%;">
+                    &nbsp;</div>
+                <div style="display:{SubtotalDisplay};vertical-align:top;width:26%;">
+                    <h4 style="margin:3px 0px;font-weight:normal;text-align:right;font-size:13px !important;color:#565656">
+                        Subtotal:</h4>
+                </div>
+                <div class="total" style="display:{SubtotalDisplay};vertical-align:top;width:15%;">
+                    <h4 style="margin:3px 0px;font-weight:600;text-align:right;font-size:13px !important;color:#565656">
+                        ${Subtotal}</h4>
+                </div>
+            </div>
+            <div style="display:block;">
+                <div style="display:inline-block;vertical-align:top;width:10%;">
+                    &nbsp;</div>
+                <div style="display:inline-block;vertical-align:top;width:45%;">
+                    &nbsp;</div>
+                <div style="display:inline-block;vertical-align:top;width:26%;">
+                    <h4 style="margin:3px 0px;font-weight:normal;text-align:right;font-size:13px !important;color:#565656">
+                        Tax:</h4>
+                </div>
+                <div class="total" style="display:inline-block;vertical-align:top;width:15%;">
+                    <h4 style="margin:3px 0px;font-weight:600;text-align:right;font-size:13px !important;color:#565656">
+                        ${TotalTax}</h4>
+                </div>
+            </div>
+            <div style="margin-top:10px;border-top:1px solid #33475b;">
+                <div style="display:inline-block;vertical-align:top;width:10%;">
+                    &nbsp;</div>
+                <div style="display:inline-block;vertical-align:top;width:45%;">
+                    &nbsp;</div>
+                <div style="display:inline-block;vertical-align:top;width:26%;background:#e4e4e4;position:relative;left:5px;">
+                    <h4 style="margin:3px 5px;font-weight:normal;text-align:right;color:#33475b;font-size:18px;">
+                        Total:</h4>
+                </div>
+                <div class="grand-total" style="display:inline-block;vertical-align:top;width:17.3%;background:#e4e4e4;">
+                    <h4 style="margin:3px 0px;font-weight:normal;text-align:right;color:#33475b;font-size:18px;padding-right:10px;">
+                        ${Total}</h4>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top:30px;padding:0 15px;bottom: 25px;position: absolute;">
+            <h3 style="margin:0 0 0 0;font-size:14px;color:#33475b;">
+                Terms &amp; Conditions:-</h3>
+            <p style="margin:5px 0 0 0;font-size:12px;">
+                Payment Due Upon Receipt. 3% Processing Fee On Credit Card Payments.</p>
+            <p style="margin:5px 0 0 0;font-size:12px;">
+                100 day warranty beginning on date of completion on parts and labor for work described above.</p>
+        </div>
+    </div>
+    
